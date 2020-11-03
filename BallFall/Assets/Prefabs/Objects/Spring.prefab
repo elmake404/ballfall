@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8665257463914804640}
   - component: {fileID: 5759811822580316677}
-  - component: {fileID: 7496805749816708815}
+  - component: {fileID: 5373341529548010838}
   m_Layer: 0
   m_Name: Spring
   m_TagString: Untagged
@@ -39,9 +39,9 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8289716705052192538}
-  m_Mesh: {fileID: -5382709211083159170, guid: f7e53abddea1dc846b6329a9f350b3df, type: 3}
---- !u!23 &7496805749816708815
-MeshRenderer:
+  m_Mesh: {fileID: -1115647119377159243, guid: e5178dff4add64746a6831b745eb5e5c, type: 3}
+--- !u!137 &5373341529548010838
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -54,11 +54,11 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: f7e53abddea1dc846b6329a9f350b3df, type: 3}
+  - {fileID: 670224309865224971, guid: b03d2bfa73ef2f541935ae9a256c0244, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -1115647119377159243, guid: e5178dff4add64746a6831b745eb5e5c, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights:
+  - 0
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0.001490593, y: 12.260237, z: 0.0036928654}
+    m_Extent: {x: 3.5215225, y: 12.765268, z: 3.5083458}
+  m_DirtyAABB: 0

@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6899276630448901037}
   - component: {fileID: 1312921556603270228}
+  - component: {fileID: 3346773455065176268}
   m_Layer: 0
   m_Name: spring
   m_TagString: Untagged
@@ -163,6 +164,21 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.001490593, y: 12.260237, z: 0.0036928654}
     m_Extent: {x: 3.5215225, y: 12.765268, z: 3.5083458}
   m_DirtyAABB: 0
+--- !u!114 &3346773455065176268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121789536214176023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b1ed95f7cbb6245a2aa5face83b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skinnedMesh: {fileID: 1312921556603270228}
+  _beginning: {fileID: 8597292744348834203}
+  _end: {fileID: 0}
 --- !u!1 &8652180976674972632
 GameObject:
   m_ObjectHideFlags: 0
