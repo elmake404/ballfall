@@ -1,0 +1,16 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LevelManager : MonoBehaviour
+{
+    public static bool IsGameWin,IsGameFlowe;
+    void Start()
+    {
+        IsGameFlowe = true;
+    }
+    void Update()
+    {
+        
+    }
+}

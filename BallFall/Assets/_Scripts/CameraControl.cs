@@ -6,14 +6,21 @@ public class CameraControl : MonoBehaviour
 {
     [SerializeField]
     private Transform _player;
-    private Vector3 _offSet;
+    private Vector3 _offSet, _cameraPos;
+    private Vector3 velocity = Vector3.zero;
+
+    [SerializeField]
+    private float _speed;
     void Start()
     {
+        //_cameraPos = transform.position;
         _offSet = _player.position - transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = _player.position-_offSet;
+        _cameraPos = (_player.position-_offSet);
+        
+        transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
     }
 }
