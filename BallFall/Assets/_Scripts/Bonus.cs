@@ -9,10 +9,6 @@ public class Bonus : MonoBehaviour
     [SerializeField]
     private Collider _collider;
     private Transform _player,_anchorPlayer;
-    void Start()
-    {
-        
-    }
 
     void LateUpdate()
     {
@@ -40,6 +36,13 @@ public class Bonus : MonoBehaviour
         if (other.tag == "Finish")
         {
             _rbMain.AddForce(Vector3.down*60);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Finish")
+        {
+            _rbMain.velocity/=2;
         }
     }
     public void Activation(Transform player,Transform anchor)
