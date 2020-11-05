@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 68051b8a7331d32489907000358191ad, type: 3}
+  - {fileID: 2100000, guid: 71f515a29486dcf4d940e8749a4f4a4f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -179,6 +179,11 @@ PrefabInstance:
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1312921556603270228, guid: 46d8512f3446bb04ba95a8ab693d6683,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bfe32594e990f44796c4600ffc8b8c8, type: 2}
     - target: {fileID: 3346773455065176268, guid: 46d8512f3446bb04ba95a8ab693d6683,
         type: 3}
       propertyPath: _end
