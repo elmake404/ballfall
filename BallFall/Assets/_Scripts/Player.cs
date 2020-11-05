@@ -16,8 +16,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _maxMass, _minMass, _changesSpeed;
     private float _factor;
+
+    [HideInInspector]
+    public bool IsFrize;
     private void Start()
     {
+        IsFrize = true;
         _sizeObj = transform.localScale;
         _cam = Camera.main;
         _factor = (_maxMass - _minMass) / ((_sizeMax.x - _sizeMin.x) * 10);
@@ -63,11 +67,11 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Finish" )
+        if (other.tag == "Finish")
         {
-            LevelManager.IsGameFlowe=false;
+            LevelManager.IsGameFlowe = false;
             if (_rbMain.velocity == Vector3.zero)
-            LevelManager.IsGameWin = true;
+                LevelManager.IsGameWin = true;
         }
     }
     private void ChangeOfSize(float change)
@@ -86,12 +90,14 @@ public class Player : MonoBehaviour
         }
         _sizeObj = size;
     }
-    public void OnFreeze()
+    public void OffFreeze()
     {
+        IsFrize = false;
         _rbMain.constraints = RigidbodyConstraints.None;
     }
     public void Freeze()
     {
+        IsFrize = true;
         _rbMain.constraints = RigidbodyConstraints.FreezePositionZ;
     }
 }
