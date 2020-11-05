@@ -11,7 +11,7 @@ public class Spiral : MonoBehaviour
         if (other.tag == "Player")
         {
             _player = other.GetComponent<Player>();
-            _player.OnFreeze();
+            _player.OffFreeze();
             _posPlayerZ = _player.transform.position.z;
         }        
     }

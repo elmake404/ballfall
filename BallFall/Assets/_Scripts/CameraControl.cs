@@ -5,22 +5,30 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     [SerializeField]
-    private Transform _player;
-    private Vector3 _offSet, _cameraPos;
+    private Player _player;
+    private Vector3 _offSet, _cameraPos,_camPosZX;
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField]
     private float _speed;
     void Start()
     {
-        //_cameraPos = transform.position;
-        _offSet = _player.position - transform.position;
+        _offSet = _player.transform.position - transform.position;
+        _camPosZX = transform.position;
     }
 
     void FixedUpdate()
     {
-        _cameraPos = (_player.position-_offSet);
-        
-        transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
+        if (_player.IsFrize)
+        {
+            _cameraPos = _camPosZX;
+            _cameraPos.y = (_player.transform.position - _offSet).y;
+            transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
+        }
+        else
+        {
+            _cameraPos = (_player.transform.position - _offSet);
+            transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
+        }
     }
 }
