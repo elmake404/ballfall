@@ -42,7 +42,7 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "Finish")
         {
-            _rbMain.velocity/=2;
+            _rbMain.velocity/=4;
         }
     }
     public void Activation(Transform player,Transform anchor)
