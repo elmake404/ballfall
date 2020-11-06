@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player PlayerMain;
+
+
     private Camera _cam;
     [SerializeField]
     private Transform _innerCollider, _anchor;
@@ -20,6 +23,10 @@ public class Player : MonoBehaviour
     private bool _isNotGrow;
     [HideInInspector]
     public bool IsFrize;
+    private void Awake()
+    {
+        PlayerMain = this;
+    }
     private void Start()
     {
         IsFrize = true;
@@ -112,20 +119,6 @@ public class Player : MonoBehaviour
         }
         transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
     }
-    private bool ChekFinish(Transform finish)
-    {
-        if ((_rbMain.velocity.x <= (Vector3.one * 0.1f).x
-                && _rbMain.velocity.x <= (Vector3.one * 0.1f).x)
-                && transform.position.x<=finish.position.x+0.2f
-                && transform.position.x>=finish.position.x-0.2f)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
     private void ChangeOfSize(float change)
     {
         Vector3 size =
@@ -152,5 +145,19 @@ public class Player : MonoBehaviour
     {
         IsFrize = true;
         _rbMain.constraints = RigidbodyConstraints.FreezePositionZ;
+    }
+    public void Push(Vector3 direction,float power,bool weightCheck)
+    {
+        if (weightCheck)
+        {
+            if (_rbMain.mass < 15)
+            {
+                _rbMain.AddForce(direction * power, ForceMode.Acceleration);
+            }
+        }
+        else
+        {
+            _rbMain.AddForce(direction * power, ForceMode.Acceleration);
+        }
     }
 }
