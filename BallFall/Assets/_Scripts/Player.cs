@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player PlayerMain;
+
+
     private Camera _cam;
     [SerializeField]
     private Transform _innerCollider, _anchor;
-    private Vector3 _startMosePos, _currentMosePos, _sizeObj,
+    private Vector3 _startMosePos, _currentMosePos, _sizeObj,_finishPos,
         _sizeMax = Vector3.one,
         _sizeMin = new Vector3(0.3f, 0.3f, 0.3f);
     [SerializeField]
@@ -20,6 +23,10 @@ public class Player : MonoBehaviour
     private bool _isNotGrow;
     [HideInInspector]
     public bool IsFrize;
+    private void Awake()
+    {
+        PlayerMain = this;
+    }
     private void Start()
     {
         IsFrize = true;
@@ -60,6 +67,22 @@ public class Player : MonoBehaviour
         _innerCollider.localScale = transform.localScale;
 
         _rbMain.mass = 2 + (_factor * ((transform.localScale.x - _sizeMin.x) * 10));
+
+        if (!LevelManager.IsGameFlowe)
+        {
+            Vector3 velocity = new Vector3(0,_rbMain.velocity.y,0);
+            _rbMain.velocity = velocity;
+            Vector3 Pos = new Vector3(_finishPos.x,transform.position.y,transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position,Pos,0.01f);
+            if ((_rbMain.velocity.x <= (Vector3.one * 0.1f).x
+                    && _rbMain.velocity.x <= (Vector3.one * 0.1f).x)
+                    && transform.position.x == _finishPos.x )
+            {
+                LevelManager.IsGameWin = true;
+                _rbMain.velocity = Vector3.zero;
+            }
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -71,19 +94,11 @@ public class Player : MonoBehaviour
         {
             _isNotGrow = true;
         }
-
-    }
-    private void OnTriggerStay(Collider other)
-    {
         if (other.tag == "Finish")
         {
+            _finishPos = other.transform.position;
             LevelManager.IsGameFlowe = false;
-            _rbMain.angularVelocity = Vector3.zero;
-            if (_rbMain.velocity.x <= (Vector3.one*0.1f).x
-                &&_rbMain.velocity.x <= (Vector3.one*0.1f).x)
-                LevelManager.IsGameWin = true;
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
@@ -130,5 +145,19 @@ public class Player : MonoBehaviour
     {
         IsFrize = true;
         _rbMain.constraints = RigidbodyConstraints.FreezePositionZ;
+    }
+    public void Push(Vector3 direction,float power,bool weightCheck)
+    {
+        if (weightCheck)
+        {
+            if (_rbMain.mass < 15)
+            {
+                _rbMain.AddForce(direction * power, ForceMode.Acceleration);
+            }
+        }
+        else
+        {
+            _rbMain.AddForce(direction * power, ForceMode.Acceleration);
+        }
     }
 }
