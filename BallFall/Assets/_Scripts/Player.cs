@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _maxMass, _minMass, _changesSpeed;
     private float _factor;
-
+    [SerializeField]
+    private bool _isNotGrow;
     [HideInInspector]
     public bool IsFrize;
     private void Start()
@@ -53,9 +54,11 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        ControlSize();
+
         _innerCollider.position = transform.position;
         _innerCollider.localScale = transform.localScale;
-        transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
+
         _rbMain.mass = 2 + (_factor * ((transform.localScale.x - _sizeMin.x) * 10));
     }
     private void OnTriggerEnter(Collider other)
@@ -64,20 +67,48 @@ public class Player : MonoBehaviour
         {
             other.GetComponentInParent<Bonus>().Activation(transform, _anchor);
         }
+        if (other.tag == "BoundaryWalls")
+        {
+            _isNotGrow = true;
+        }
+
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Finish")
         {
             LevelManager.IsGameFlowe = false;
-            if (_rbMain.velocity == Vector3.zero)
+            _rbMain.angularVelocity = Vector3.zero;
+            if (_rbMain.velocity.x <= (Vector3.one*0.1f).x
+                &&_rbMain.velocity.x <= (Vector3.one*0.1f).x)
                 LevelManager.IsGameWin = true;
         }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "BoundaryWalls")
+        {
+            _isNotGrow = false;
+        }
+
+    }
+    private void ControlSize()
+    {
+        if (_isNotGrow)
+        {
+            if (_sizeObj.x > transform.localScale.x)
+            {
+                _sizeObj = transform.localScale;
+            }
+        }
+        transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
     }
     private void ChangeOfSize(float change)
     {
         Vector3 size =
-            new Vector3(_sizeObj.x + change, _sizeObj.y + change, _sizeObj.z + change);
+                 new Vector3(_sizeObj.x + change, _sizeObj.y + change, _sizeObj.z + change);
+
         if (size.x > _sizeMax.x)
         {
             _sizeObj = _sizeMax;

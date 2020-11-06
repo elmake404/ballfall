@@ -10,10 +10,12 @@ public class CameraControl : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField]
-    private float _speed;
+    private float _speed = 0.07f;
     void Start()
     {
-        _offSet = _player.transform.position - transform.position;
+        Vector3 PosPlayer = _player.transform.position;
+        PosPlayer.x = transform.position.x;
+        _offSet = PosPlayer - transform.position;
         _camPosZX = transform.position;
     }
 

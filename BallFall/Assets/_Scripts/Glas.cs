@@ -10,6 +10,7 @@ public class Glas : MonoBehaviour
     {
         if (collision.gameObject.tag=="Player")
         {
+            _brokesGlas.transform.SetParent(null);
             _brokesGlas.SetActive(true);
             gameObject.SetActive(false);
         }

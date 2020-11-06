@@ -13,7 +13,9 @@ public class BrokesGlas : MonoBehaviour
         if (collision.gameObject.tag == "Player"
             && collision.gameObject.GetComponent<Rigidbody>().mass>= _penetrationMass)
         {
+            transform.SetParent(null);
             _rbMain.isKinematic = false;
+            Destroy(gameObject,1);
         }
     }
 }
