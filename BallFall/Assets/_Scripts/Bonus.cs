@@ -35,14 +35,16 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "Finish")
         {
-            _rbMain.AddForce(Vector3.down*60);
+            gameObject.layer = 11;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Finish")
         {
-            _rbMain.velocity/=4;
+            gameObject.layer = 10;
+
+            _rbMain.velocity=Vector3.zero;
         }
     }
     public void Activation(Transform player,Transform anchor)

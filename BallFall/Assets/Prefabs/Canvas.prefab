@@ -142,7 +142,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -468,6 +468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224054857239236796}
+  - component: {fileID: 2616087452812118602}
   - component: {fileID: 223808376688739160}
   - component: {fileID: 114202609689444734}
   - component: {fileID: 114156858430577842}
@@ -502,6 +503,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2616087452812118602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303832208994624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf27917137c390749ab9de58ad197f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuUi: {fileID: 1540774971198130}
+  _InGameUi: {fileID: 1330982414427864}
+  _winUI: {fileID: 1861001377410760}
+  _loseUI: {fileID: 1205622139762256}
+  _progressBar: {fileID: 114001056353947824}
+  _texLevelWin: {fileID: 114270688891508128}
+  _texLevelGameCurrent: {fileID: 114759885750932754}
+  _texLevelGameTarget: {fileID: 114633648108852910}
 --- !u!223 &223808376688739160
 Canvas:
   m_ObjectHideFlags: 0
@@ -837,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224450332640718464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1783,6 +1804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224157190844761560}
   - component: {fileID: 222833033245645070}
+  - component: {fileID: 870638450129631966}
   - component: {fileID: 114548771299787008}
   m_Layer: 5
   m_Name: MenuUI
@@ -1820,6 +1842,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540774971198130}
   m_CullTransparentMesh: 0
+--- !u!114 &870638450129631966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540774971198130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0702f5737c7864c9f9734a3713eb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114548771299787008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3270,6 +3304,7 @@ GameObject:
   - component: {fileID: 224466399777825040}
   - component: {fileID: 222945786586553314}
   - component: {fileID: 114559704692398332}
+  - component: {fileID: 5873743150029307247}
   m_Layer: 5
   m_Name: WinUI
   m_TagString: Untagged
@@ -3335,6 +3370,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5873743150029307247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861001377410760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0884e97db4a324ba4a7118578204da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1920995408023012
 GameObject:
   m_ObjectHideFlags: 0

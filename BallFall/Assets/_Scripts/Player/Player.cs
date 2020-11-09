@@ -6,11 +6,12 @@ public class Player : MonoBehaviour
 {
     public static Player PlayerMain;
 
-
     private Camera _cam;
     [SerializeField]
     private Transform _innerCollider, _anchor;
-    private Vector3 _startMosePos, _currentMosePos, _sizeObj,_finishPos,
+    [SerializeField]
+    private Vector3 _finishPos;
+    private Vector3 _startMosePos, _currentMosePos, _sizeObj,
         _sizeMax = Vector3.one,
         _sizeMin = new Vector3(0.3f, 0.3f, 0.3f);
     [SerializeField]
@@ -21,23 +22,28 @@ public class Player : MonoBehaviour
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
+    
+    
     [HideInInspector]
     public bool IsFrize;
+    [HideInInspector]
+    public float MaxSize = 1;
+
     private void Awake()
     {
         PlayerMain = this;
+        IsFrize = true;
+        gameObject.SetActive(false);
     }
     private void Start()
     {
-        IsFrize = true;
         _sizeObj = transform.localScale;
         _cam = Camera.main;
         _factor = (_maxMass - _minMass) / ((_sizeMax.x - _sizeMin.x) * 10);
     }
-
     private void Update()
     {
-        if (LevelManager.IsGameFlowe)
+        if (LevelManager.IsStartGame)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -67,22 +73,6 @@ public class Player : MonoBehaviour
         _innerCollider.localScale = transform.localScale;
 
         _rbMain.mass = 2 + (_factor * ((transform.localScale.x - _sizeMin.x) * 10));
-
-        if (!LevelManager.IsGameFlowe)
-        {
-            Vector3 velocity = new Vector3(0,_rbMain.velocity.y,0);
-            _rbMain.velocity = velocity;
-            Vector3 Pos = new Vector3(_finishPos.x,transform.position.y,transform.position.z);
-            transform.position = Vector3.MoveTowards(transform.position,Pos,0.01f);
-            if ((_rbMain.velocity.x <= (Vector3.one * 0.1f).x
-                    && _rbMain.velocity.x <= (Vector3.one * 0.1f).x)
-                    && transform.position.x == _finishPos.x )
-            {
-                LevelManager.IsGameWin = true;
-                _rbMain.velocity = Vector3.zero;
-            }
-
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -96,8 +86,8 @@ public class Player : MonoBehaviour
         }
         if (other.tag == "Finish")
         {
-            _finishPos = other.transform.position;
-            LevelManager.IsGameFlowe = false;
+            LevelManager.IsStartGame = false;
+            StartCoroutine(FinishGame());
         }
     }
     private void OnTriggerExit(Collider other)
@@ -106,6 +96,22 @@ public class Player : MonoBehaviour
         {
             _isNotGrow = false;
         }
+
+    }
+    private IEnumerator FinishGame()
+    {
+        _rbMain.isKinematic = true;
+        _rbMain.velocity = Vector3.zero;
+
+        while (transform.position != _finishPos)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, _finishPos, 0.05f);
+            yield return new WaitForSeconds(0.02f);
+        }
+        yield return new WaitForSeconds(0.5f);
+
+        LevelManager.IsGameWin = true;
+        _rbMain.velocity = Vector3.zero;
 
     }
     private void ControlSize()
@@ -117,7 +123,11 @@ public class Player : MonoBehaviour
                 _sizeObj = transform.localScale;
             }
         }
-        transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
+
+        if (LevelManager.IsStartGame)
+            transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
+        else
+            transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed * 2);
     }
     private void ChangeOfSize(float change)
     {
@@ -136,6 +146,11 @@ public class Player : MonoBehaviour
         }
         _sizeObj = size;
     }
+    [ContextMenu("FindFinishPos")]
+    private void FindFinishPos()
+    {
+        _finishPos = GameObject.FindWithTag("FinishPos").transform.position;
+    }
     public void OffFreeze()
     {
         IsFrize = false;
@@ -146,7 +161,7 @@ public class Player : MonoBehaviour
         IsFrize = true;
         _rbMain.constraints = RigidbodyConstraints.FreezePositionZ;
     }
-    public void Push(Vector3 direction,float power,bool weightCheck)
+    public void Push(Vector3 direction, float power, bool weightCheck)
     {
         if (weightCheck)
         {
@@ -159,5 +174,17 @@ public class Player : MonoBehaviour
         {
             _rbMain.AddForce(direction * power, ForceMode.Acceleration);
         }
+    }
+    public void ChangingTheMaximumSize(float newMaxSize)
+    {
+        _sizeMax = new Vector3(newMaxSize,newMaxSize,newMaxSize);
+    }
+    public void ReturnToDefaultSize()
+    {
+        _sizeMax = Vector3.one;
+    }
+    public float GetMagnitudeToFinish()
+    {
+        return (_finishPos - transform.position).sqrMagnitude;
     }
 }

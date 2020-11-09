@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static bool IsGameWin,IsGameFlowe;
+    public static bool IsGameWin, IsStartGame;
     void Start()
     {
-        IsGameFlowe = true;
+        //IsStartGame = true;
     }
     void Update()
     {

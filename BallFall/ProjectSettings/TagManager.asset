@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bonus
   - BoundaryWalls
+  - FinishPos
   layers:
   - Default
   - TransparentFX
