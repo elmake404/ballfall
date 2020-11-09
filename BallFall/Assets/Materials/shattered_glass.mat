@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: shattered_glass
-  m_Shader: {fileID: 4800000, guid: c57b2d96c82bf442185a1c640dd5368d, type: 3}
+  m_Shader: {fileID: 4800000, guid: b5fb7cbf5f5654dedaf7fe28e8302008, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -97,7 +97,7 @@ Material:
     - _FogScaleZ: 10
     - _FresnelBias: 1
     - _FresnelPower: 0.58
-    - _Fresnel_power: 0.2
+    - _Fresnel_power: 0.3
     - _GlobalLightIntensity: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -110,8 +110,8 @@ Material:
     - _OcclusionStrength: 1
     - _OffsetVertical: 0
     - _Parallax: 0.02
-    - _RefractiveIndex: 1
-    - _RefractivePower: 1.5
+    - _RefractiveIndex: 0.5
+    - _RefractivePower: 0.5
     - _SSSPower: 1
     - _Scale: 1
     - _Scale1: 1
@@ -120,20 +120,20 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Transparency: 1
+    - _Transparency: 0.5
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _CenterColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0.9478378, a: 1}
-    - _ColorMain: {r: 0.5707547, g: 0.8754693, b: 1, a: 1}
+    - _ColorMain: {r: 0.39404595, g: 0.5770644, b: 0.7264151, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _GrabTexture_TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - _HorizontalFogColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightDirection: {r: 1, g: 1, b: 1, a: 1}
-    - _MidColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MidColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _VerticalFogColor: {r: 1, g: 1, b: 1, a: 1}

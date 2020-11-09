@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: smallpiston
+  m_Shader: {fileID: 4800000, guid: 265dd8e2ac5f64a2c99d8d734526060a, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AOFactor: 1
+    - _Alpha: 0
+    - _Blue: 0.541
+    - _BumpScale: 1
+    - _CurveFactor: 1
+    - _CurveFactorLongitudual: 0.03
+    - _CurveFactorTangential: 0.03
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Fresnel_power: 0
+    - _GlobalLightIntensity: 1
+    - _Glossiness: 0.424
+    - _Green: 0
+    - _MaintTexOpacity: 1
+    - _Metallic: 0.612
+    - _Mode: 0
+    - _ORTHO: 0
+    - _OUTLINE: 0
+    - _OcclusionStrength: 1
+    - _OffsetVertical: 0.02
+    - _Outline: 0.1
+    - _OutlineIntensity: 1
+    - _OutlineX: 0.1
+    - _OutlineY: 0.1
+    - _Parallax: 0.02
+    - _Red: 1
+    - _RefractiveIndex: 1
+    - _RefractivePower: 10
+    - _SSSPower: 1
+    - _Scale: 1
+    - _Scale1: -1.38
+    - _Scale2: 0.4
+    - _Shininess: 1
+    - _SrcBlend: 1
+    - _Transparency: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CenterColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.65882355, g: 0.5953225, b: 0.2222537, a: 0}
+    - _ColorMain: {r: 0.63529414, g: 0.46398988, b: 0.047058836, a: 1}
+    - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.16911763, g: 0.16911763, b: 0.16911763, a: 1}
+    - _MidColor: {r: 1, g: 0.25, b: 0.67036295, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.99487543, g: 1, b: 0.6431373, a: 1}
