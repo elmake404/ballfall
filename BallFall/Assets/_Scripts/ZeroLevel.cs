@@ -7,7 +7,6 @@ public class ZeroLevel : MonoBehaviour
 {
     private void Awake()
     {
-        LevelManager.IsGameWin = false;
         if (PlayerPrefs.GetInt("Scenes") < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(PlayerPrefs.GetInt("Scenes"));

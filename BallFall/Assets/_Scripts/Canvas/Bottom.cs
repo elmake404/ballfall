@@ -7,6 +7,8 @@ public class Bottom : MonoBehaviour
 {
     public void RestartBottom()
     {
+        LevelManager.IsStartGame = false;
+        LevelManager.IsGameWin= false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
