@@ -7,6 +7,11 @@ public class ZeroLevel : MonoBehaviour
 {
     private void Awake()
     {
+        if (PlayerPrefs.GetInt("Scenes")<=0)
+        {
+            PlayerPrefs.SetInt("Scenes", 1);
+        }
+
         if (PlayerPrefs.GetInt("Scenes") < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(PlayerPrefs.GetInt("Scenes"));
