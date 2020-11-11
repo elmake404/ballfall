@@ -180,6 +180,25 @@ CapsuleCollider:
   m_Height: 1.1179345
   m_Direction: 1
   m_Center: {x: 0, y: 0.008609734, z: 0.006077408}
+--- !u!95 &7346820013031618332
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880308112333479526}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f31cee1de476b8a43b38a556015268ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6383091036955835030
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,11 +428,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 3780132773208092689, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db646c93b697b4946a9786c2eaeb1a39, type: 2}
+=======
     - target: {fileID: 8432329290792162961, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
         type: 3}
       propertyPath: rend
       value: 
       objectReference: {fileID: 7284340445813897933}
+>>>>>>> 831461690a3d7e22fc12b7ff7155b5b7cd81e7d2
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c2aa1a2b814934b99a69cdbe2d2095, type: 3}
 --- !u!4 &6745785190423153641 stripped
@@ -422,9 +449,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5864416447922309852}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &5880308112333479526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70257292261594298, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+=======
 --- !u!23 &7284340445813897933 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3780132773208092689, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+>>>>>>> 831461690a3d7e22fc12b7ff7155b5b7cd81e7d2
     type: 3}
   m_PrefabInstance: {fileID: 5864416447922309852}
   m_PrefabAsset: {fileID: 0}
