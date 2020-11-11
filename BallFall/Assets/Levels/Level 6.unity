@@ -2307,6 +2307,11 @@ PrefabInstance:
       propertyPath: _direction.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2623119598493883469, guid: 1b7529e6338e097469a70ab07132c6b0,
+        type: 3}
+      propertyPath: scrollSpeed
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 6043439094343344172, guid: 1b7529e6338e097469a70ab07132c6b0,
         type: 3}
       propertyPath: m_LocalPosition.x
