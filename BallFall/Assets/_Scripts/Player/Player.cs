@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Vector3 _finishPos;
     private Vector3 _startMosePos, _currentMosePos, _sizeObj,
+        _currentSizeMax = Vector3.one,
         _sizeMax = Vector3.one,
         _sizeMin = new Vector3(0.3f, 0.3f, 0.3f);
     [SerializeField]
@@ -22,8 +23,8 @@ public class Player : MonoBehaviour
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
-    
-    
+
+
     [HideInInspector]
     public bool IsFrize;
     [HideInInspector]
@@ -56,7 +57,7 @@ public class Player : MonoBehaviour
                     _startMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
                 }
                 _currentMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
-                ChangeOfSize((_startMosePos.y - _currentMosePos.y) * 4);
+                ChangeOfSize((_startMosePos.y - _currentMosePos.y) * 8);
                 _startMosePos = _currentMosePos;
             }
         }
@@ -72,7 +73,7 @@ public class Player : MonoBehaviour
         _innerCollider.position = transform.position;
         _innerCollider.localScale = transform.localScale;
 
-        _rbMain.mass = 2 + (_factor * ((transform.localScale.x - _sizeMin.x) * 10));
+        _rbMain.mass = 2 + (_factor * ((_sizeObj.x - _sizeMin.x) * 10));
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -125,7 +126,13 @@ public class Player : MonoBehaviour
         }
 
         if (LevelManager.IsStartGame)
+        {
+            if (_sizeObj.x > _currentSizeMax.x && _sizeObj.x > transform.localScale.x)
+            {
+                _sizeObj = transform.localScale;
+            }
             transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
+        }
         else
             transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed * 2);
     }
@@ -177,11 +184,11 @@ public class Player : MonoBehaviour
     }
     public void ChangingTheMaximumSize(float newMaxSize)
     {
-        _sizeMax = new Vector3(newMaxSize,newMaxSize,newMaxSize);
+        _currentSizeMax = new Vector3(newMaxSize, newMaxSize, newMaxSize);
     }
     public void ReturnToDefaultSize()
     {
-        _sizeMax = Vector3.one;
+        _currentSizeMax = _sizeMax;
     }
     public float GetMagnitudeToFinish()
     {
