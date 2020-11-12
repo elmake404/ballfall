@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ZeroLevel : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
         if (PlayerPrefs.GetInt("Scenes")<=0)
         {

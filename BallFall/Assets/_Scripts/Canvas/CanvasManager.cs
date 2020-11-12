@@ -16,8 +16,11 @@ public class CanvasManager : MonoBehaviour
     private float _maxDistance;
     private void Start()
     {
+        FacebookManager.Instance.GameStart();
+
         _player = Player.PlayerMain;
         _maxDistance = _player.GetMagnitudeToFinish();
+
         if (PlayerPrefs.GetInt("Level") <= 0)
         {
             PlayerPrefs.SetInt("Level", 1);
@@ -41,6 +44,7 @@ public class CanvasManager : MonoBehaviour
         {
             _InGameUi.SetActive(false);
             _winUI.SetActive(true);
+            FacebookManager.Instance.LevelWin(PlayerPrefs.GetInt("Level"));
             PlayerPrefs.SetInt("Scenes", PlayerPrefs.GetInt("Scenes") + 1);
             PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
         }

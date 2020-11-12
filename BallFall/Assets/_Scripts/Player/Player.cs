@@ -97,7 +97,6 @@ public class Player : MonoBehaviour
         {
             _isNotGrow = false;
         }
-
     }
     private IEnumerator FinishGame()
     {

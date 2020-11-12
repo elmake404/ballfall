@@ -8,6 +8,7 @@ public class StartGame : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            FacebookManager.Instance.LevelStart(PlayerPrefs.GetInt("Level"));
             Player.PlayerMain.gameObject.SetActive(true);
             LevelManager.IsStartGame = true;
             gameObject.SetActive(false);
