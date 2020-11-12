@@ -5,6 +5,10 @@ using UnityEngine;
 public class Bonus : MonoBehaviour
 {
     [SerializeField]
+    private MeshRenderer _meshMain;
+    [SerializeField]
+    private Material _oldMaterial, _newMaterial;
+    [SerializeField]
     private Rigidbody _rbMain;
     [SerializeField]
     private Collider _collider;
@@ -43,12 +47,14 @@ public class Bonus : MonoBehaviour
         if (other.tag == "Finish")
         {
             gameObject.layer = 10;
+            _meshMain.material = _oldMaterial;
 
             _rbMain.velocity=Vector3.zero;
         }
     }
     public void Activation(Transform player,Transform anchor)
     {
+        _meshMain.material = _newMaterial;
         _anchorPlayer = anchor;
         _player = player;
         transform.position = _player.position;

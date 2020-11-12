@@ -155,6 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab13119cbe1f0440bc4f73328409eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshMain: {fileID: 4238563166058904632}
+  _oldMaterial: {fileID: 2100000, guid: 2033480317b953341936648cde378f7f, type: 2}
+  _newMaterial: {fileID: 2100000, guid: 8f145b221479eac42822c8a6139fa24c, type: 2}
   _rbMain: {fileID: 4270342633643775631}
   _collider: {fileID: 4238563166058904633}
 --- !u!1 &4661031488187800743
