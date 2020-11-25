@@ -4093,7 +4093,7 @@ Transform:
   m_LocalScale: {x: 2.40047, y: 1.8517699, z: 1.00024}
   m_Children: []
   m_Father: {fileID: 1477410690}
-  m_RootOrder: 40
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1223652528
 PrefabInstance:
@@ -5274,6 +5274,7 @@ Transform:
   - {fileID: 711863835}
   - {fileID: 332696447}
   - {fileID: 1569785923}
+  - {fileID: 1798574685}
   - {fileID: 1904239989}
   - {fileID: 175683305}
   - {fileID: 1006569949}
@@ -5283,11 +5284,11 @@ Transform:
   - {fileID: 1533443525}
   - {fileID: 1774663958}
   - {fileID: 840814588}
-  - {fileID: 1798574685}
   - {fileID: 1468278287}
   - {fileID: 1268001836}
   - {fileID: 1223652529}
   - {fileID: 141062885}
+  - {fileID: 1206803824}
   - {fileID: 25052376}
   - {fileID: 1092433937}
   - {fileID: 1950251055}
@@ -5295,7 +5296,6 @@ Transform:
   - {fileID: 841096085}
   - {fileID: 1435904264}
   - {fileID: 1737318929}
-  - {fileID: 1206803824}
   - {fileID: 880456300}
   - {fileID: 234978983}
   - {fileID: 584494790}
@@ -6473,7 +6473,7 @@ Transform:
   m_LocalScale: {x: 2.2277331, y: 0.630492, z: 1}
   m_Children: []
   m_Father: {fileID: 1477410690}
-  m_RootOrder: 28
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1798574686
 BoxCollider:
@@ -7193,7 +7193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2025082598
 MonoBehaviour:
   m_ObjectHideFlags: 0
