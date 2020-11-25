@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static bool IsGameWin, IsStartGame;
+    public static bool IsGameWin, IsStartGame,IsEntrance;
     void Start()
     {
         //IsStartGame = true;

@@ -28,10 +28,12 @@ public class CanvasManager : MonoBehaviour
         _texLevelWin.text = "Level " + PlayerPrefs.GetInt("Level");
         _texLevelGameCurrent.text = PlayerPrefs.GetInt("Level").ToString();
         _texLevelGameTarget.text = (PlayerPrefs.GetInt("Level") + 1).ToString();
-        if (!LevelManager.IsStartGame)
+
+        if (!LevelManager.IsEntrance)
         {
             _menuUi.SetActive(true);
         }
+
         FacebookManager.Instance.GameStart();
 
     }

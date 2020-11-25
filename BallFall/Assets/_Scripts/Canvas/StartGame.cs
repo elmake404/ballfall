@@ -11,6 +11,8 @@ public class StartGame : MonoBehaviour
             FacebookManager.Instance.LevelStart(PlayerPrefs.GetInt("Level"));
             Player.PlayerMain.gameObject.SetActive(true);
             LevelManager.IsStartGame = true;
+            LevelManager.IsEntrance = true;
+            
             gameObject.SetActive(false);
         }
     }
