@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     {
         PlayerMain = this;
         IsFrize = true;
+
         if (!LevelManager.IsEntrance)
         {
             gameObject.SetActive(false);

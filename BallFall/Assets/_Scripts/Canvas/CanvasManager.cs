@@ -18,13 +18,13 @@ public class CanvasManager : MonoBehaviour
     {
         _player = Player.PlayerMain;
 
-
         _maxDistance = _player.GetMagnitudeToFinish();
 
         if (PlayerPrefs.GetInt("Level") <= 0)
         {
             PlayerPrefs.SetInt("Level", 1);
         }
+
         _texLevelWin.text = "Level " + PlayerPrefs.GetInt("Level");
         _texLevelGameCurrent.text = PlayerPrefs.GetInt("Level").ToString();
         _texLevelGameTarget.text = (PlayerPrefs.GetInt("Level") + 1).ToString();
@@ -32,6 +32,10 @@ public class CanvasManager : MonoBehaviour
         if (!LevelManager.IsEntrance)
         {
             _menuUi.SetActive(true);
+        }
+        else
+        {
+            FacebookManager.Instance.LevelStart(PlayerPrefs.GetInt("Level"));
         }
 
         FacebookManager.Instance.GameStart();
