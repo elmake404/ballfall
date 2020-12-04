@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8338192640880014628}
   - component: {fileID: 3401984549238407673}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (9)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613850431222633860}
   - component: {fileID: 6224689061372063821}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (8)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7244914316066943360}
   - component: {fileID: 631236995341786838}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (5)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204549350337289783}
   - component: {fileID: 1903647170641455881}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (2)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2406558038882496612}
   - component: {fileID: 3010331622492534887}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (3)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7314137463740025938}
   - component: {fileID: 5663865722954631116}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (4)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6798913222643165886}
   - component: {fileID: 1377864439714480711}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (6)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5964688461904222772}
   - component: {fileID: 6427458573351307291}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (1)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3067500038773349671}
   - component: {fileID: 4648070175640267521}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (7)
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5168645750011223851}
   - component: {fileID: 8224799604751022107}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider
   m_TagString: BoundaryWalls
   m_Icon: {fileID: 0}

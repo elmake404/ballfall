@@ -21,7 +21,6 @@ public class Spy : MonoBehaviour
             Collider.SetActive(false);
         }    
     }
-
     void LateUpdate()
     {
         transform.position = _player.position;

@@ -1530,6 +1530,75 @@ Transform:
   m_Father: {fileID: 433522155}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &893653391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 390036609044425886, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057859408654297649, guid: 8d40f70d55ec25f47ba78e84f4b547f0,
+        type: 3}
+      propertyPath: m_Name
+      value: JumpTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d40f70d55ec25f47ba78e84f4b547f0, type: 3}
 --- !u!1 &980337424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1611,7 @@ GameObject:
   - component: {fileID: 980337427}
   - component: {fileID: 980337426}
   - component: {fileID: 980337425}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3116,7 +3185,7 @@ GameObject:
   - component: {fileID: 1784096610}
   - component: {fileID: 1784096609}
   - component: {fileID: 1784096608}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

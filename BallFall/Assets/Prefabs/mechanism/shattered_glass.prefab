@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 856353552516660624}
   - component: {fileID: 6351300143139664537}
   - component: {fileID: 2278353927654206083}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 152205243516276597}
   - component: {fileID: 8637636367808721966}
   - component: {fileID: 5385404182381791687}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 7316378687271877743}
   - component: {fileID: 408460965223607050}
   - component: {fileID: 5930348693564197685}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 670601455371990755}
   - component: {fileID: 8435376411208427569}
   - component: {fileID: 8820147214511777488}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 7091269979464778561}
   - component: {fileID: 8965155630799590935}
   - component: {fileID: 5191580942475091891}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 7970072424264354026}
   - component: {fileID: 120695918306731853}
   - component: {fileID: 3912490276657738275}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 8525437841557739883}
   - component: {fileID: 698389774155253432}
   - component: {fileID: 4483959417374702051}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +896,7 @@ GameObject:
   - component: {fileID: 480214350708450198}
   - component: {fileID: 903498449592573970}
   - component: {fileID: 4903359250746786261}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 6842249872419439250}
   - component: {fileID: 7650201527247441213}
   - component: {fileID: 3163112411521713392}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 2717731001732559670}
   - component: {fileID: 362549804106012812}
   - component: {fileID: 5076577783766501855}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1641165296801086216}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: brokesGlas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 4502084460729326073}
   - component: {fileID: 7977777892690926351}
   - component: {fileID: 3322982151178079646}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 6003180271680455754}
   - component: {fileID: 4043363921525629158}
   - component: {fileID: 1506287037173100212}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 1105452213800368055}
   - component: {fileID: 2453663716051355417}
   - component: {fileID: 637404152718404082}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1702,7 +1702,7 @@ GameObject:
   - component: {fileID: 127914616022750700}
   - component: {fileID: 7785179900583242674}
   - component: {fileID: 9071495389170124554}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1828,7 @@ GameObject:
   - component: {fileID: 2162164104536370846}
   - component: {fileID: 2905580723217842238}
   - component: {fileID: 5074433873477214339}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1954,7 +1954,7 @@ GameObject:
   - component: {fileID: 7891266057600008478}
   - component: {fileID: 2368260676188875044}
   - component: {fileID: 5751816523531023081}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8023023668008139666}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: shattered_glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2112,7 +2112,7 @@ GameObject:
   - component: {fileID: 7034426249600751117}
   - component: {fileID: 4858943812368376745}
   - component: {fileID: 3183195767091221815}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,7 +2238,7 @@ GameObject:
   - component: {fileID: 6536791880914214661}
   - component: {fileID: 1906366876335481822}
   - component: {fileID: 9074315326500952791}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2364,7 +2364,7 @@ GameObject:
   - component: {fileID: 9099306045028997089}
   - component: {fileID: 8017165708303305868}
   - component: {fileID: 1179615805066773548}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2490,7 +2490,7 @@ GameObject:
   - component: {fileID: 8220605004752525832}
   - component: {fileID: 3198796497412250759}
   - component: {fileID: 1632459831210964354}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ORIGINAL_CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2614,7 +2614,7 @@ GameObject:
   - component: {fileID: 5507941336221809976}
   - component: {fileID: 7119676152925537158}
   - component: {fileID: 5493538271513576271}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube_fracturepart18
   m_TagString: Untagged
   m_Icon: {fileID: 0}

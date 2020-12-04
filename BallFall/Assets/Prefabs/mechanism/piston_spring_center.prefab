@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5347755452608092616}
   - component: {fileID: 5627889462095535992}
   - component: {fileID: 1049488741255843959}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: piston_spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8151531243962833772}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: piston_spring_center
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 926874496646250997}
   - component: {fileID: 3114270170410448191}
   - component: {fileID: -5712669441981067975}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}

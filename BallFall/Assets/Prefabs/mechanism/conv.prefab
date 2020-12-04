@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506446545993961339}
   - component: {fileID: 5844923336057495968}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ColliderTrigger (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4432880776442061158}
   - component: {fileID: 8702676784381515776}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493914481471504171}
   - component: {fileID: 2210106681006580846}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ColliderTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092028244006803700}
   - component: {fileID: 2515215795731869088}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8476415627933612589}
   - component: {fileID: 2548637282515979713}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ColliderTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7042233613729835116}
   - component: {fileID: 4582548707888501740}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Caollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,10 +344,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6043439094343344172}
     m_Modifications:
+    - target: {fileID: 70257292261594298, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 555228080938752911, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
         type: 3}
       propertyPath: m_Name
       value: conv
+      objectReference: {fileID: 0}
+    - target: {fileID: 555228080938752911, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 936537976754487605, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
         type: 3}
@@ -404,6 +414,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3508566884139253447, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3780132773208092689, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -414,6 +429,11 @@ PrefabInstance:
       propertyPath: rend
       value: 
       objectReference: {fileID: 7284340445813897933}
+    - target: {fileID: 8835082263248841452, guid: c8c2aa1a2b814934b99a69cdbe2d2095,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c2aa1a2b814934b99a69cdbe2d2095, type: 3}
 --- !u!4 &6745785190423153641 stripped

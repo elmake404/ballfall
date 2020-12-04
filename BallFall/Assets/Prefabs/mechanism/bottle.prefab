@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2552143430549461514}
   - component: {fileID: 2537315304023546669}
   - component: {fileID: 1741516257907146186}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bottle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6206331705860724163}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FinishPos
   m_TagString: FinishPos
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7433475090674655904}
   - component: {fileID: 642067558716853439}
   - component: {fileID: 4618400649813505549}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 6216441523902374224}
   - component: {fileID: 6077911099272878412}
   - component: {fileID: 7529357538324994957}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 115763041386524935}
   - component: {fileID: 4857921377870581292}
   - component: {fileID: 7410594023871195332}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6717987496867339420}
   - component: {fileID: 4478051683812733456}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: bottle
   m_TagString: Finish
   m_Icon: {fileID: 0}

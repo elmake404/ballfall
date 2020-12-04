@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3611456030755941722}
   - component: {fileID: 1583735903350069648}
   - component: {fileID: -932122762642189890}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: big_spring_piston
   m_TagString: Untagged
   m_Icon: {fileID: 0}

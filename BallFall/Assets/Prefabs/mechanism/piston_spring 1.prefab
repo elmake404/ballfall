@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 552689261697695059}
   - component: {fileID: 5627889462095535992}
   - component: {fileID: 1049488741255843959}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: piston_spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8151531243962833772}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: piston_spring 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,6 +191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: big_spring_piston_center 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1053170390986570040, guid: 1068b9fa13507854fa043857204cf8ae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2650293399798283522, guid: 1068b9fa13507854fa043857204cf8ae,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -201,6 +206,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 84d6577b2a6354f07b5530ddad4c3d4a, type: 2}
+    - target: {fileID: 3674470381672455267, guid: 1068b9fa13507854fa043857204cf8ae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714526543337977863, guid: 1068b9fa13507854fa043857204cf8ae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205946173210933572, guid: 1068b9fa13507854fa043857204cf8ae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1068b9fa13507854fa043857204cf8ae, type: 3}
 --- !u!4 &2229905953990896265 stripped

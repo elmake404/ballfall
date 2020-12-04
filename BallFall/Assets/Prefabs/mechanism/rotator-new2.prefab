@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4247320056484661424}
   - component: {fileID: 2956997675726445931}
   - component: {fileID: 7498999243401779210}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: circle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 1553223814243746905}
   - component: {fileID: 4143774027054279321}
   - component: {fileID: 4236799238260201702}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: circle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 6694383252988415087}
   - component: {fileID: 8845444282480416148}
   - component: {fileID: 6193012876213101319}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Boole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 6248353352975686216}
   - component: {fileID: 6211861785030963483}
   - component: {fileID: 5265991027981630213}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: rotator-new2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

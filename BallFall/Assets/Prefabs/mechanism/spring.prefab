@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4216224322609306314}
   - component: {fileID: 1273733230632682350}
   - component: {fileID: 7157168455650332155}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pose_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6899276630448901037}
   - component: {fileID: 1312921556603270228}
   - component: {fileID: 3346773455065176268}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8597292744348834203}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Poses__Spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}

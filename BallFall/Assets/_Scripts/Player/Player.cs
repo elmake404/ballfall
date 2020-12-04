@@ -11,15 +11,16 @@ public class Player : MonoBehaviour
     private Transform _innerCollider, _anchor;
     [SerializeField]
     private Vector3 _finishPos;
-    private Vector3 _startMosePos, _currentMosePos, _sizeObj,
+    private Vector3 _goOffMosePos, _startMosePos, _currentMosePos, _sizeObj,
         _currentSizeMax = Vector3.one,
         _sizeMax = Vector3.one,
-        _sizeMin = new Vector3(0.3f, 0.3f, 0.3f);
+        _sizeMin = new Vector3(0.3f, 0.3f, 0.3f),
+    _direcrionVector = Vector3.zero;
     [SerializeField]
     private Rigidbody _rbMain;
 
     [SerializeField]
-    private float _maxMass, _minMass, _changesSpeed;
+    private float _maxMass, _minMass, _changesSpeed,_jampforse;
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
@@ -56,32 +57,42 @@ public class Player : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _goOffMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
                 _startMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
             }
             else if (Input.GetMouseButton(0))
             {
-                if (_startMosePos == Vector3.zero)
+                if (_goOffMosePos == Vector3.zero)
                 {
                     _startMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
+                    _goOffMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
                 }
                 _currentMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
-                ChangeOfSize((_startMosePos.y - _currentMosePos.y) * 8);
-                _startMosePos = _currentMosePos;
+
+                if (Mathf.Abs(_goOffMosePos.y - _currentMosePos.y) >= 0.1f)
+                {
+                    ChangeOfSize((_goOffMosePos.y - _currentMosePos.y) * 8);
+                    _goOffMosePos = _currentMosePos;
+
+                }
+                float X = (_currentMosePos.x - _startMosePos.x) * 6;
+                _direcrionVector = new Vector3(X, 0, 0);
             }
         }
         else
         {
+            _direcrionVector = Vector3.zero;
             ChangeOfSize(1);
         }
     }
     private void FixedUpdate()
     {
         ControlSize();
-
+        _rbMain.AddForce(_direcrionVector*1,ForceMode.Acceleration);
         _innerCollider.position = transform.position;
         _innerCollider.localScale = transform.localScale;
 
-        _rbMain.mass = 2 + (_factor * ((_sizeObj.x - _sizeMin.x) * 10));
+        _rbMain.mass = _minMass + (_factor * ((_sizeObj.x - _sizeMin.x) * 10));
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -145,20 +156,20 @@ public class Player : MonoBehaviour
     }
     private void ChangeOfSize(float change)
     {
-        Vector3 size =
-                 new Vector3(_sizeObj.x + change, _sizeObj.y + change, _sizeObj.z + change);
+        //Vector3 size =
+        //         new Vector3(_sizeObj.x + change, _sizeObj.y + change, _sizeObj.z + change);
 
-        if (size.x > _sizeMax.x)
+        if (change > 0)
         {
             _sizeObj = _sizeMax;
             return;
         }
-        else if (size.x < _sizeMin.x)
+        else if (change <  0)
         {
             _sizeObj = _sizeMin;
             return;
         }
-        _sizeObj = size;
+        //_sizeObj = size;
     }
     [ContextMenu("FindFinishPos")]
     private void FindFinishPos()
@@ -200,5 +211,17 @@ public class Player : MonoBehaviour
     public float GetMagnitudeToFinish()
     {
         return (_finishPos - transform.position).sqrMagnitude;
+    }
+    public bool GetSize()
+    {
+        return transform.localScale.x <= _sizeMin.x;
+    }
+    public void Jamp()
+    {
+        _rbMain.AddForce(Vector3.up *_jampforse,ForceMode.Acceleration);
+    }
+    public Vector3 GetSizeMin()
+    {
+        return _sizeMin;
     }
 }
