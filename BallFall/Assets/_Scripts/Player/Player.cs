@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -130,6 +131,16 @@ public class Player : MonoBehaviour
         {
             _isNotGrow = false;
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Spikes")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //LevelManager.IsStartGame = false;
+            //Destroy(gameObject);
+        }
+
     }
     private IEnumerator FinishGame()
     {

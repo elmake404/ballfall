@@ -21,16 +21,17 @@ public class CameraControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_player.IsFrize)
-        {
-            _cameraPos = _camPosZX;
-            _cameraPos.y = (_player.transform.position - _offSet).y;
-            transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
-        }
-        else
-        {
-            _cameraPos = (_player.transform.position - _offSet);
-            transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
-        }
+            if (_player.IsFrize)
+            {
+                _cameraPos = _camPosZX;
+                _cameraPos.y = (_player.transform.position - _offSet).y;
+                transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
+            }
+            else
+            {
+                _cameraPos = (_player.transform.position - _offSet);
+                transform.position = Vector3.SmoothDamp(transform.position, _cameraPos, ref velocity, _speed);
+            }
+
     }
 }
