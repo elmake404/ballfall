@@ -159,9 +159,9 @@ MonoBehaviour:
   _finishPos: {x: 0, y: 0, z: 0}
   _rbMain: {fileID: 6175552563671640358}
   _maxMass: 35
-  _minMass: 1
+  _minMass: 2
   _changesSpeed: 0.05
-  _jampforse: 200
+  _speed: 6
   _isNotGrow: 0
   IsFrize: 0
   MaxSize: 1

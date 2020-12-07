@@ -81,4 +81,13 @@ public class FacebookManager : MonoBehaviour
             "Level win",
             parameters : tutParms);
     }
+    public void LevelFail(int lvl)
+    {
+        var tutParms = new Dictionary<string, object>();
+        tutParms["Level Namber"] = lvl.ToString();
+
+        FB.LogAppEvent(
+            "Level fail",
+            parameters : tutParms);
+    }
 }

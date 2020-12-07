@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private Rigidbody _rbMain;
 
     [SerializeField]
-    private float _maxMass, _minMass, _changesSpeed,_jampforse;
+    private float _maxMass, _minMass, _changesSpeed, _speed;
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
@@ -62,6 +62,8 @@ public class Player : MonoBehaviour
             }
             else if (Input.GetMouseButton(0))
             {
+                ChangeOfSize(1);
+
                 if (_goOffMosePos == Vector3.zero)
                 {
                     _startMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
@@ -69,26 +71,38 @@ public class Player : MonoBehaviour
                 }
                 _currentMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
 
-                if (Mathf.Abs(_goOffMosePos.y - _currentMosePos.y) >= 0.1f)
+                if (Mathf.Abs(_startMosePos.x - _currentMosePos.x) >= 0.05f)
                 {
-                    ChangeOfSize((_goOffMosePos.y - _currentMosePos.y) * 8);
-                    _goOffMosePos = _currentMosePos;
+                    if (Mathf.Abs((_currentMosePos.x - _startMosePos.x) * 3) > 1)
+                    {
+                        float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 0.3f : -0.3f);
+                        _startMosePos.x = _currentMosePos.x - xStart;
+                    }
 
+                    float X = ((_currentMosePos.x - _startMosePos.x) * 3) * _speed;
+                    _direcrionVector = new Vector3(X, 0, 0);
                 }
-                float X = (_currentMosePos.x - _startMosePos.x) * 6;
-                _direcrionVector = new Vector3(X, 0, 0);
+                else
+                {
+                    _direcrionVector = _rbMain.velocity;
+                }
+            }
+            else
+            {
+                _direcrionVector = _rbMain.velocity;
+                ChangeOfSize(-1);
             }
         }
         else
         {
-            _direcrionVector = Vector3.zero;
             ChangeOfSize(1);
         }
     }
     private void FixedUpdate()
     {
         ControlSize();
-        _rbMain.AddForce(_direcrionVector*1,ForceMode.Acceleration);
+        _direcrionVector.y = _rbMain.velocity.y;
+        _rbMain.velocity = _direcrionVector;
         _innerCollider.position = transform.position;
         _innerCollider.localScale = transform.localScale;
 
@@ -164,7 +178,7 @@ public class Player : MonoBehaviour
             _sizeObj = _sizeMax;
             return;
         }
-        else if (change <  0)
+        else if (change < 0)
         {
             _sizeObj = _sizeMin;
             return;
@@ -215,10 +229,6 @@ public class Player : MonoBehaviour
     public bool GetSize()
     {
         return transform.localScale.x <= _sizeMin.x;
-    }
-    public void Jamp()
-    {
-        _rbMain.AddForce(Vector3.up *_jampforse,ForceMode.Acceleration);
     }
     public Vector3 GetSizeMin()
     {
