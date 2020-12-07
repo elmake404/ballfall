@@ -23,7 +23,7 @@ public class Spy : MonoBehaviour
     }
     void LateUpdate()
     {
-        transform.position = _player.position;
-        transform.localScale = _player.localScale;
+            transform.position = _player.position;
+            transform.localScale = _player.localScale;
     }
 }
