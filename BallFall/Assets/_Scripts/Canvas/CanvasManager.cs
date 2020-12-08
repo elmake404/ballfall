@@ -56,13 +56,22 @@ public class CanvasManager : MonoBehaviour
             PlayerPrefs.SetInt("Scenes", PlayerPrefs.GetInt("Scenes") + 1);
             PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
         }
+        if (LevelManager.IsGameLose && !_loseUI.activeSelf)
+        {
+            _InGameUi.SetActive(false);
+            _loseUI.SetActive(true);
+            FacebookManager.Instance.LevelFail(PlayerPrefs.GetInt("Level"));
+        }
     }
     private void LateUpdate()
     {
-        float mag = _player.GetMagnitudeToFinish();
-        float fillAmount =  (_maxDistance - mag) / _maxDistance;
+        if (!LevelManager.IsGameLose)
+        {
+            float mag = _player.GetMagnitudeToFinish();
+            float fillAmount = (_maxDistance - mag) / _maxDistance;
 
-        if (_progressBar.fillAmount < fillAmount)
-            _progressBar.fillAmount = fillAmount;
+            if (_progressBar.fillAmount < fillAmount)
+                _progressBar.fillAmount = fillAmount;
+        }
     }
 }

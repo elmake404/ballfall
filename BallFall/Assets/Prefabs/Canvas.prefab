@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 224688940048067554}
   - component: {fileID: 222315607361722650}
   - component: {fileID: 114958129978660382}
+  - component: {fileID: 7971001124430258106}
   m_Layer: 5
   m_Name: LostUI
   m_TagString: Untagged
@@ -365,6 +366,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7971001124430258106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205622139762256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877b49ee62186ea43a7cac384923ef2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1274692196999612
 GameObject:
   m_ObjectHideFlags: 0
