@@ -160,6 +160,7 @@ MonoBehaviour:
   _rbMain: {fileID: 6175552563671640358}
   _maxMass: 35
   _minMass: 2
+  _destructionMass: 100
   _changesSpeed: 0.05
   _speed: 6
   _isNotGrow: 0
