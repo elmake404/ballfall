@@ -108,13 +108,12 @@ public class Player : MonoBehaviour
         _innerCollider.position = transform.position;
         _innerCollider.localScale = transform.localScale;
 
-        if (_isDestructionMass)
+        if (_isMaxMass)
         {
-            _rbMain.mass = _destructionMass;
-        }
-        else if (_isMaxMass)
-        {
-            _rbMain.mass = _maxMass;
+            if (_isDestructionMass)
+                _rbMain.mass = _destructionMass;
+            else
+                _rbMain.mass = _maxMass;
         }
         else
         {
