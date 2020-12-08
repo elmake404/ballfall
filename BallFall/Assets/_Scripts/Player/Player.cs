@@ -136,9 +136,11 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.tag == "Spikes")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            //LevelManager.IsStartGame = false;
-            //Destroy(gameObject);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            LevelManager.IsStartGame = false;
+            LevelManager.IsGameLose = true;
+            Destroy(_innerCollider.gameObject);
+            Destroy(gameObject);
         }
 
     }

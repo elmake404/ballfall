@@ -12,17 +12,26 @@ public class Bonus : MonoBehaviour
     private Rigidbody _rbMain;
     [SerializeField]
     private Collider _collider;
-    private Transform _player,_anchorPlayer;
+    private Transform _player, _anchorPlayer;
+
+    private bool _isLevelFalse;
 
     void LateUpdate()
     {
-        if (_player!=null)
+        if (_player != null)
         {
             transform.localScale = _player.localScale;
             if (!LevelManager.IsGameWin)
             {
                 ControlPosition();
             }
+        }
+        else if (_rbMain.isKinematic && LevelManager.IsGameLose)
+        {
+            _meshMain.material = _oldMaterial;
+            gameObject.layer = 0;
+            _collider.gameObject.layer = 0;
+            transform.localScale = Vector3.one;
         }
     }
     private void ControlPosition()
@@ -49,10 +58,10 @@ public class Bonus : MonoBehaviour
             gameObject.layer = 10;
             _meshMain.material = _oldMaterial;
 
-            _rbMain.velocity=Vector3.zero;
+            _rbMain.velocity = Vector3.zero;
         }
     }
-    public void Activation(Transform player,Transform anchor)
+    public void Activation(Transform player, Transform anchor)
     {
         _meshMain.material = _newMaterial;
         _anchorPlayer = anchor;
@@ -60,7 +69,7 @@ public class Bonus : MonoBehaviour
         transform.position = _player.position;
         transform.localScale = _player.localScale;
         gameObject.layer = 9;
-        _collider.gameObject.layer= 9;
+        _collider.gameObject.layer = 9;
         _collider.isTrigger = false;
         _rbMain.isKinematic = false;
     }
