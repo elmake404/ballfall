@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
+    public static CanvasManager CanvasMain;
+
     [SerializeField]
     private GameObject _menuUi, _InGameUi, _winUI, _loseUI;
     [SerializeField]
@@ -12,10 +14,20 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private Text _texLevelWin, _texLevelGameCurrent, _texLevelGameTarget;
     private Player _player;
+    [SerializeField]
+    private Image[] _stars;
 
-    private float _maxDistance;
+
+    private float _maxDistance, _fillStars, _numberStars, _receivedStars;
+    private bool _isWin = false;
+    private int _namberBonus, _namberArreySrars = 0;
     private void Start()
     {
+        CanvasMain = this;
+        _namberBonus = LevelManager.Namberbonus;
+        LevelManager.Namberbonus = 0;
+        _fillStars = 3f / _namberBonus;
+
         _player = Player.PlayerMain;
 
         _maxDistance = _player.GetMagnitudeToFinish();
@@ -44,18 +56,32 @@ public class CanvasManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (LevelManager.IsStartGame && !_InGameUi.activeSelf)
+        if (_numberStars < _receivedStars)
+        {
+            _numberStars += 0.05f;
+
+            _stars[_namberArreySrars].fillAmount += 0.05f;
+            if (_stars[_namberArreySrars].fillAmount >= 1 && _namberArreySrars < _stars.Length - 1)
+            {
+                _namberArreySrars++;
+            }
+        }
+
+        if (LevelManager.IsStartGame && !_InGameUi.activeSelf && !LevelManager.IsTutorial)
         {
             _InGameUi.SetActive(true);
         }
+
         if (LevelManager.IsGameWin && !_winUI.activeSelf)
         {
             _InGameUi.SetActive(false);
             _winUI.SetActive(true);
+            _isWin = true;
             FacebookManager.Instance.LevelWin(PlayerPrefs.GetInt("Level"));
             PlayerPrefs.SetInt("Scenes", PlayerPrefs.GetInt("Scenes") + 1);
             PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
         }
+
         if (LevelManager.IsGameLose && !_loseUI.activeSelf)
         {
             _InGameUi.SetActive(false);
@@ -74,4 +100,9 @@ public class CanvasManager : MonoBehaviour
                 _progressBar.fillAmount = fillAmount;
         }
     }
+    public void ResidentSaved()
+    {
+        _receivedStars += _fillStars;
+    }
+
 }
