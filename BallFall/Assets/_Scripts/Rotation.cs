@@ -1,0 +1,14 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Rotation : MonoBehaviour
+{
+    [SerializeField]
+    private float _speed;
+
+    void FixedUpdate()
+    {
+        transform.Rotate(Vector3.forward * _speed);
+    }
+}
