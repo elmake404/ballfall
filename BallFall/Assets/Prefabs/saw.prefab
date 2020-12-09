@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6782063172879050438}
   - component: {fileID: 6303684526151301000}
   - component: {fileID: 6184316499172917955}
+  - component: {fileID: 5586776629061337112}
   m_Layer: 0
   m_Name: saw
   m_TagString: Spikes
@@ -60,6 +61,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0
+--- !u!95 &5586776629061337112
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148937591862770812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e74137c243c0b2e42ac6a59d1ca2ec8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8907666871667213326
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 548ca1b2f3454d14f90020339f0b3071, type: 3}
+  - {fileID: 2100000, guid: adb8ad9e22dc5d04da50fe642528d46d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,7 +217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 548ca1b2f3454d14f90020339f0b3071, type: 3}
+  - {fileID: 2100000, guid: adb8ad9e22dc5d04da50fe642528d46d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
