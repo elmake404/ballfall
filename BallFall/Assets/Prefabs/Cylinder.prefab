@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8487200d04cae84bb443523931fa659, type: 2}
+  - {fileID: 2100000, guid: 1e3bbf100bf51924e96a0d3f41493b3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,8 +121,8 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3659331790092292123}
   m_ConnectedBody: {fileID: 0}
-  m_BreakForce: 100
-  m_BreakTorque: 100
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1
