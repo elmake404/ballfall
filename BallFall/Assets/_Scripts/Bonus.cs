@@ -15,7 +15,10 @@ public class Bonus : MonoBehaviour
     private Transform _player, _anchorPlayer;
 
     private bool _isLevelFalse;
-
+    private void Awake()
+    {
+        LevelManager.Namberbonus++;
+    }
     void LateUpdate()
     {
         if (_player != null)
@@ -55,6 +58,9 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "Finish")
         {
+            CanvasManager.CanvasMain.ResidentSaved();
+            LevelManager.NamberActivationBonus--;
+
             gameObject.layer = 10;
             _meshMain.material = _oldMaterial;
 
@@ -63,6 +69,7 @@ public class Bonus : MonoBehaviour
     }
     public void Activation(Transform player, Transform anchor)
     {
+        LevelManager.NamberActivationBonus++;
         _meshMain.material = _newMaterial;
         _anchorPlayer = anchor;
         _player = player;
