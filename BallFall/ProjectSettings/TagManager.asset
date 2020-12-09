@@ -8,6 +8,7 @@ TagManager:
   - BoundaryWalls
   - FinishPos
   - Spikes
+  - Destruction
   layers:
   - Default
   - TransparentFX

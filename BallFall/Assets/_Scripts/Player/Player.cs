@@ -21,11 +21,11 @@ public class Player : MonoBehaviour
     private Rigidbody _rbMain;
 
     [SerializeField]
-    private float _maxMass, _minMass, _changesSpeed, _speed;
+    private float _maxMass, _minMass, _destructionMass, _changesSpeed, _speed;
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
-
+    private bool _isMaxMass, _isDestructionMass;
 
     [HideInInspector]
     public bool IsFrize;
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             else if (Input.GetMouseButton(0))
             {
                 ChangeOfSize(1);
-
+                _isMaxMass = true;
                 if (_goOffMosePos == Vector3.zero)
                 {
                     _startMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
@@ -92,6 +92,7 @@ public class Player : MonoBehaviour
             {
                 _direcrionVector = _rbMain.velocity;
                 ChangeOfSize(-1);
+                _isMaxMass = false;
             }
         }
         else
@@ -107,7 +108,17 @@ public class Player : MonoBehaviour
         _innerCollider.position = transform.position;
         _innerCollider.localScale = transform.localScale;
 
-        _rbMain.mass = _minMass + (_factor * ((_sizeObj.x - _sizeMin.x) * 10));
+        if (_isMaxMass)
+        {
+            if (_isDestructionMass)
+                _rbMain.mass = _destructionMass;
+            else
+                _rbMain.mass = _maxMass;
+        }
+        else
+        {
+            _rbMain.mass = _minMass;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -136,11 +147,24 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.tag == "Spikes")
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             LevelManager.IsStartGame = false;
             LevelManager.IsGameLose = true;
             Destroy(_innerCollider.gameObject);
             Destroy(gameObject);
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag== "Destruction")
+        {
+            _isDestructionMass = true;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Destruction")
+        {
+            _isDestructionMass = false;
         }
 
     }
