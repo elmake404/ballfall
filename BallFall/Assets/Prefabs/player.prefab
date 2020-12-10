@@ -161,7 +161,7 @@ MonoBehaviour:
   _maxMass: 35
   _minMass: 2
   _destructionMass: 100
-  _changesSpeed: 0.05
+  _changesSpeed: 0.07
   _speed: 6
   _isNotGrow: 0
   IsFrize: 0
