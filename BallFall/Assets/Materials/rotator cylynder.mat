@@ -126,11 +126,11 @@ Material:
     - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _CenterColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 0}
-    - _ColorMain: {r: 0.735849, g: 0.36931217, b: 0.0034709943, a: 1}
+    - _ColorMain: {r: 0.7372549, g: 0.34038788, b: 0.0039215903, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GrabTexture_TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - _HorizontalFogColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MidColor: {r: 0.9716981, g: 0.82513815, b: 0.022917405, a: 1}
+    - _MidColor: {r: 1, g: 0.5645768, b: 0, a: 1}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _VerticalFogColor: {r: 1, g: 1, b: 1, a: 1}
