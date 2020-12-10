@@ -116,11 +116,11 @@ Material:
     - _Scale: 1
     - _Scale1: 1
     - _Scale2: 1
-    - _Shininess: 1
+    - _Shininess: 0.1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Transparency: 0.5
+    - _Transparency: 0.7
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -133,7 +133,7 @@ Material:
     - _GrabTexture_TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - _HorizontalFogColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightDirection: {r: 1, g: 1, b: 1, a: 1}
-    - _MidColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+    - _MidColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _VerticalFogColor: {r: 1, g: 1, b: 1, a: 1}
