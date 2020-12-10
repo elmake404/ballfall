@@ -25,11 +25,9 @@ public class Bridge : MonoBehaviour
             {
                 Destroy(_configurableJoints[i].gameObject,Random.Range(0.5f,1.5f));
                 Destroy(_configurableJoints[i]);
-
             }
         }
         yield return new WaitForSeconds(1);
-        //Destroy(gameObject);
     }
     public void StartDestruction()
     {
