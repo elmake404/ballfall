@@ -49,19 +49,19 @@ public class Bonus : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Finish")
+        if (other.tag == "ColliderBonus")
         {
-            gameObject.layer = 11;
+                    _collider.gameObject.layer = 10;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Finish")
+        if (other.tag == "ColliderBonus")
         {
             CanvasManager.CanvasMain.ResidentSaved();
             LevelManager.NamberActivationBonus--;
 
-            gameObject.layer = 10;
+            _collider.gameObject.layer = 9;
             _meshMain.material = _oldMaterial;
 
             _rbMain.velocity = Vector3.zero;

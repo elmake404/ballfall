@@ -29,7 +29,7 @@ public class GameContinue : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (LevelManager.NamberActivationBonus == 0 && LevelManager.IsGameWin)
+        if (LevelManager.NamberActivationBonus <= 0 && LevelManager.IsGameWin)
         {
             _bottom.SetActive(true);
         }

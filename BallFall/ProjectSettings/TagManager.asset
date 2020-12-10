@@ -9,6 +9,7 @@ TagManager:
   - FinishPos
   - Spikes
   - Destruction
+  - ColliderBonus
   layers:
   - Default
   - TransparentFX
