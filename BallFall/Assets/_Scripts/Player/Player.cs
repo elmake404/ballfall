@@ -155,7 +155,7 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.collider.tag== "Destruction")
+        if (collision.collider.tag == "Destruction")
         {
             _isDestructionMass = true;
         }
@@ -198,7 +198,14 @@ public class Player : MonoBehaviour
         {
             if (_sizeObj.x > _currentSizeMax.x && _sizeObj.x > transform.localScale.x)
             {
-                _sizeObj = transform.localScale;
+                if (_currentSizeMax.x < transform.localScale.x)
+                {
+                    _sizeObj = transform.localScale;
+                }
+                else
+                {
+                    _sizeObj = _currentSizeMax;
+                }
             }
             transform.localScale = Vector3.MoveTowards(transform.localScale, _sizeObj, _changesSpeed);
         }
@@ -207,9 +214,6 @@ public class Player : MonoBehaviour
     }
     private void ChangeOfSize(float change)
     {
-        //Vector3 size =
-        //         new Vector3(_sizeObj.x + change, _sizeObj.y + change, _sizeObj.z + change);
-
         if (change > 0)
         {
             _sizeObj = _sizeMax;
@@ -218,9 +222,7 @@ public class Player : MonoBehaviour
         else if (change < 0)
         {
             _sizeObj = _sizeMin;
-            return;
         }
-        //_sizeObj = size;
     }
     [ContextMenu("FindFinishPos")]
     private void FindFinishPos()
