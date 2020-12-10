@@ -65,6 +65,11 @@ public class CanvasManager : MonoBehaviour
             {
                 _namberArreySrars++;
             }
+            else if (_stars[_namberArreySrars].fillAmount >= 1 && _namberArreySrars > _stars.Length - 1)
+            {
+                Debug.Log("пройдено");
+            }
+            
         }
 
         if (LevelManager.IsStartGame && !_InGameUi.activeSelf && !LevelManager.IsTutorial)
