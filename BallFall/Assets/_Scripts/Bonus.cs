@@ -70,9 +70,6 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "BonusBottle")
         {
-            CanvasManager.CanvasMain.ResidentSaved();
-            LevelManager.NamberActivationBonus--;
-
             _collider.gameObject.layer = 9;
             _meshMain.material = _oldMaterial;
 

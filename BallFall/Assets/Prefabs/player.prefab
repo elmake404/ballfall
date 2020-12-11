@@ -162,7 +162,8 @@ MonoBehaviour:
   _minMass: 2
   _destructionMass: 100
   _changesSpeed: 0.07
-  _speed: 7
+  _speed: 5
+  _joystickSensitivity: 8
   _isNotGrow: 0
   IsFrize: 0
   MaxSize: 1

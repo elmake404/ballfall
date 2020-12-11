@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private Rigidbody _rbMain;
 
     [SerializeField]
-    private float _maxMass, _minMass, _destructionMass, _changesSpeed, _speed;
+    private float _maxMass, _minMass, _destructionMass, _changesSpeed, _speed, _joystickSensitivity;
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
@@ -72,23 +72,16 @@ public class Player : MonoBehaviour
                 }
                 _currentMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
 
-                if (Mathf.Abs(_startMosePos.x - _currentMosePos.x) >= 0.05f)
+                if (Mathf.Abs((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity) > 1)
                 {
-                    if (Mathf.Abs((_currentMosePos.x - _startMosePos.x) * 5) > 1)
-                    {
-                        float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 0.2f : -0.2f);
-                        _startMosePos.x = _currentMosePos.x - xStart;
-                        Debug.Log((_currentMosePos.x - _startMosePos.x) * 5);
+                    float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 1f/ _joystickSensitivity : -(1f/ _joystickSensitivity));
+                    _startMosePos.x = _currentMosePos.x - xStart;
+                    Debug.Log((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity);
 
-                    }
+                }
 
-                    float X = ((_currentMosePos.x - _startMosePos.x) * 5) * _speed;
-                    _direcrionVector = new Vector3(X, 0, 0);
-                }
-                else
-                {
-                    _direcrionVector = _rbMain.velocity;
-                }
+                float X = ((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity) * _speed;
+                _direcrionVector = new Vector3(X, 0, 0);
             }
             else
             {

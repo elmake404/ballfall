@@ -78,11 +78,6 @@ public class CanvasManager : MonoBehaviour
             {
                 _namberArreySrars++;
             }
-            else if (_stars[_namberArreySrars].fillAmount >= 1 && _namberArreySrars >= _stars.Length - 1)
-            {
-                Debug.Log("пройдено");
-            }
-
         }
 
         if (LevelManager.IsStartGame && !_InGameUi.activeSelf && !LevelManager.IsTutorial)
@@ -95,6 +90,8 @@ public class CanvasManager : MonoBehaviour
             _InGameUi.SetActive(false);
             _winUI.SetActive(true);
             _isWin = true;
+
+            ResidentSaved();
 
             FacebookManager.Instance.LevelWin(PlayerPrefs.GetInt("Level"));
 
@@ -122,7 +119,8 @@ public class CanvasManager : MonoBehaviour
     }
     public void ResidentSaved()
     {
-        _receivedStars += _fillStars;
+        _receivedStars = LevelManager.NamberActivationBonus * _fillStars;
+        LevelManager.NamberActivationBonus = 0;
     }
 
 }
