@@ -53,11 +53,24 @@ public class Bonus : MonoBehaviour
         {
           _collider.gameObject.layer = 10;
         }
+
+        //if (other.tag == "BonusBottle")
+        //{
+        //    Debug.Log(LevelManager.NamberActivationBonus);
+        //    CanvasManager.CanvasMain.ResidentSaved();
+        //    LevelManager.NamberActivationBonus--;
+
+        //    _collider.gameObject.layer = 9;
+        //    _meshMain.material = _oldMaterial;
+
+        //    _rbMain.velocity = Vector3.zero;
+        //}
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ColliderBonus")
+        if (other.tag == "BonusBottle")
         {
+            Debug.Log(LevelManager.NamberActivationBonus);
             CanvasManager.CanvasMain.ResidentSaved();
             LevelManager.NamberActivationBonus--;
 

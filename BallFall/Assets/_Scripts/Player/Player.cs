@@ -74,13 +74,13 @@ public class Player : MonoBehaviour
 
                 if (Mathf.Abs(_startMosePos.x - _currentMosePos.x) >= 0.05f)
                 {
-                    if (Mathf.Abs((_currentMosePos.x - _startMosePos.x) * 3) > 1)
+                    if (Mathf.Abs((_currentMosePos.x - _startMosePos.x) * 7) > 1)
                     {
-                        float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 0.3f : -0.3f);
+                        float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 0.14f : -0.14f);
                         _startMosePos.x = _currentMosePos.x - xStart;
                     }
 
-                    float X = ((_currentMosePos.x - _startMosePos.x) * 3) * _speed;
+                    float X = ((_currentMosePos.x - _startMosePos.x) * 7) * _speed;
                     _direcrionVector = new Vector3(X, 0, 0);
                 }
                 else

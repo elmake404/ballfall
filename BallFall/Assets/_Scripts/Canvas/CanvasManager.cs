@@ -28,6 +28,9 @@ public class CanvasManager : MonoBehaviour
         LevelManager.Namberbonus = 0;
         _fillStars = 3f / _namberBonus;
 
+        Debug.Log(_namberBonus);
+        Debug.Log(_fillStars);
+
         //PlayerPrefs.SetInt("Scenes", 1);
         //PlayerPrefs.SetInt("Level", 1);
         //PlayerPrefs.SetInt("FirstEntry", 0);
@@ -61,7 +64,7 @@ public class CanvasManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(LevelManager.Namberbonus);
+            Debug.Log(LevelManager.NamberActivationBonus);
             Debug.Log(LevelManager.IsGameWin);
         }
 
