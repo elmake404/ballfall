@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
                 {
                     float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 1f/ _joystickSensitivity : -(1f/ _joystickSensitivity));
                     _startMosePos.x = _currentMosePos.x - xStart;
-                    Debug.Log((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity);
+                    //Debug.Log((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity);
 
                 }
 

@@ -10,10 +10,7 @@ public class Destruction : MonoBehaviour
     private FixedJoint _joint;
     [SerializeField]
     private Rigidbody _rigidbody;
-    //private void Start()
-    //{
-    //    _mesh.enabled = false;
-    //}
+
     void FixedUpdate()
     {
         if (_joint== null)
@@ -31,19 +28,22 @@ public class Destruction : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _joint = GetComponent<FixedJoint>();
     }
-
+    public void ActivationRB()
+    {
+        _rigidbody.isKinematic = false;
+    }
     //private void OnTriggerEnter(Collider other)
     //{
     //    if (other.tag == "SpaceCamera")
     //    {
-    //        _mesh.enabled = true;
+    //        _rigidbody.isKinematic = false;
     //    }
     //}
     //private void OnTriggerExit(Collider other)
     //{
-    //    if (other.tag == "SpaceCamera"&& gameObject.layer!=13)
+    //    if (other.tag == "SpaceCamera" )
     //    {
-    //        _mesh.enabled = false;
+    //        _rigidbody.isKinematic = true;
     //    }
 
     //}
