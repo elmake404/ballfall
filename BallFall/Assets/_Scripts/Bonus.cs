@@ -51,7 +51,7 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "ColliderBonus")
         {
-                    _collider.gameObject.layer = 10;
+          _collider.gameObject.layer = 10;
         }
     }
     private void OnTriggerExit(Collider other)

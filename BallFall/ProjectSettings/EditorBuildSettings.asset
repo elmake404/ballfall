@@ -9,63 +9,75 @@ EditorBuildSettings:
     path: Assets/Levels/ZeroLevel.unity
     guid: e631e33155ad9be43b7f158203befce5
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 1.unity
-    guid: beed8c4da1174134d9083b68885aadb8
+    path: Assets/Levels/New Levels/__ LVL 10.unity
+    guid: 9203c568180993e41b57fb9261ba21fd
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 2.unity
-    guid: 031bb6d8278da2245b32be0cf04270be
+    path: Assets/Levels/Yarik's Levels/Level 1.unity
+    guid: 47d37d31b4e3a874da1d39e6485b22ef
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 3.unity
-    guid: 5e6f978a4deb733419460cdfe32e92d8
+    path: Assets/Levels/Yarik's Levels/Level 2.unity
+    guid: 75b55a28a579d6d4faeccde34608bc4a
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 4.unity
-    guid: 772809823c22b7b44877a6bf4e2a7db4
+    path: Assets/Levels/New Levels/__ LVL 13.unity
+    guid: cdb4ca9ac7dfbf8419d1ce33e9037959
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 1.unity
-    guid: 4241df94961bfad489d3efe90438e8a8
+    path: Assets/Levels/Yarik's Levels/Level 3.unity
+    guid: 05ebbbdfbadbdfe46abab6912ab5e213
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 6.unity
-    guid: f62207e3878d0a14fbdeefa2373d1527
+    path: Assets/Levels/Yarik's Levels/Level 4.unity
+    guid: 3a432c84f5bc54845a69ee1bf0714f89
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 4.unity
-    guid: b60822372bf3536438d9a773c2f76f6b
+    path: Assets/Levels/New Levels/__ LVL 2.unity
+    guid: 7465659a15539284a8d54d4ffc128d72
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 5.unity
-    guid: cea828c02131dea4282e061e4a09407e
+    path: Assets/Levels/New Levels/__ LVL 12.unity
+    guid: e63fdb79a5918ed4d94ffb37c1e030ee
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 7.unity
-    guid: 89e5b5aa395452342829bb9529728952
+    path: Assets/Levels/Yarik's Levels/Level 5.unity
+    guid: 1fca5ad29f4d34740848df59e4b52c02
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 7.unity
-    guid: 68203ed9e25679c4fab63afc8eea8253
+    path: Assets/Levels/New Levels/__ LVL 3.unity
+    guid: a8ae0d3bfd2c6ae48b0103be895f97f2
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 8.unity
-    guid: 6de549c1e080d63498f7acd2fcf9734e
+    path: Assets/Levels/New Levels/__ LVL 5.unity
+    guid: 59d0310323f142149ab435d35fcb55ac
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 2.unity
-    guid: 78ff6a49d6973204485303f9e6cc5ea5
+    path: Assets/Levels/Yarik's Levels/Level 6.unity
+    guid: face17777cf9ac34d92cfedeb91d1122
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 3.unity
-    guid: ff0fd3b842cf64c40b1982a0f617cda9
+    path: Assets/Levels/New Levels/__ LVL 1.unity
+    guid: 2e5b0f2e33cf41f478d358a5ebcbbf53
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 9.unity
-    guid: 855aad0ab0be6e04ba986a3fa9e0fc4c
+    path: Assets/Levels/New Levels/__ LVL 8.unity
+    guid: 497308cb860275b47a05b55f76f12364
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level 10.unity
-    guid: caf078e6ab625294b93f4b864fd435df
+    path: Assets/Levels/New Levels/__ LVL 11.unity
+    guid: 971857f4265436a4e87013624b1a3690
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 6.unity
-    guid: a84a02cea8467ab468f1a358d40fecf4
+    path: Assets/Levels/Yarik's Levels/Level 7.unity
+    guid: 21050ac1712057b4d934bf0e072b359c
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 8.unity
-    guid: 0a901b14eea32944a994f11669628a58
+    path: Assets/Levels/Yarik's Levels/Level 8.unity
+    guid: 91b21c9fc82131041a97d31577a50b1a
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 9.unity
-    guid: f9e2663e13450ef4b90ce8d6d119be2e
+    path: Assets/Levels/New Levels/__ LVL 4.unity
+    guid: af86799cc76a748448c4a50bf88e29fe
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level_1.unity
-    guid: db6e17b2a31d23344a066d38d076a2da
+    path: Assets/Levels/New Levels/__ LVL 6.unity
+    guid: c90f5ceae1aa6ab498b2ac50956547ff
   - enabled: 1
-    path: Assets/Levels/oldLevel/Level New 10.unity
-    guid: cf480b0e7c0b9db4a89dbe859013d7cc
+    path: Assets/Levels/New Levels/__ LVL 7.unity
+    guid: caed43ff5fce45747880ab2241615e45
+  - enabled: 1
+    path: Assets/Levels/New Levels/__ LVL 14.unity
+    guid: 39d0c74838e5c1e4f8dd3222d9c27e7c
+  - enabled: 1
+    path: Assets/Levels/Yarik's Levels/Level 9.unity
+    guid: 554f20e8c76fee743a9353a01e111fdc
+  - enabled: 1
+    path: Assets/Levels/Yarik's Levels/Level 10.unity
+    guid: a0ad0ec924b86a0439a4bf69556ebba0
+  - enabled: 1
+    path: Assets/Levels/Yarik's Levels/Level 11.unity
+    guid: c7686607e0598844dbbc0391bacc5a10
   m_configObjects: {}

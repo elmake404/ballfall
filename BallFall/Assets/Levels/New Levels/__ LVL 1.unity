@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 13767483}
   - component: {fileID: 13767482}
   m_Layer: 0
-  m_Name: Lommit (1)
+  m_Name: Limmit (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14278,7 +14278,7 @@ GameObject:
   - component: {fileID: 730166030}
   - component: {fileID: 730166029}
   m_Layer: 0
-  m_Name: Lommit
+  m_Name: Limmit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

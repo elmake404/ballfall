@@ -28,6 +28,9 @@ public class CanvasManager : MonoBehaviour
         LevelManager.Namberbonus = 0;
         _fillStars = 3f / _namberBonus;
 
+        //PlayerPrefs.SetInt("Scenes", 1);
+        //PlayerPrefs.SetInt("Level", 1);
+        //PlayerPrefs.SetInt("FirstEntry", 0);
         _player = Player.PlayerMain;
 
         _maxDistance = _player.GetMagnitudeToFinish();
@@ -56,11 +59,18 @@ public class CanvasManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log(LevelManager.Namberbonus);
+            Debug.Log(LevelManager.IsGameWin);
+        }
+
         if (_numberStars < _receivedStars)
         {
             _numberStars += 0.05f;
 
             _stars[_namberArreySrars].fillAmount += 0.05f;
+
             if (_stars[_namberArreySrars].fillAmount >= 1 && _namberArreySrars < _stars.Length - 1)
             {
                 _namberArreySrars++;
@@ -69,7 +79,7 @@ public class CanvasManager : MonoBehaviour
             {
                 Debug.Log("пройдено");
             }
-            
+
         }
 
         if (LevelManager.IsStartGame && !_InGameUi.activeSelf && !LevelManager.IsTutorial)
@@ -82,7 +92,9 @@ public class CanvasManager : MonoBehaviour
             _InGameUi.SetActive(false);
             _winUI.SetActive(true);
             _isWin = true;
+
             FacebookManager.Instance.LevelWin(PlayerPrefs.GetInt("Level"));
+
             PlayerPrefs.SetInt("Scenes", PlayerPrefs.GetInt("Scenes") + 1);
             PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
         }

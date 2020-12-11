@@ -17,6 +17,7 @@ public class StartGame : MonoBehaviour
                 Time.fixedDeltaTime = 0;
                 Time.timeScale = 0;
             }
+
             FacebookManager.Instance.LevelStart(PlayerPrefs.GetInt("Level"));
 
             Player.PlayerMain.gameObject.SetActive(true);
