@@ -97,7 +97,7 @@ Material:
     - _FogScaleZ: 10
     - _FresnelBias: 1
     - _FresnelPower: 0.58
-    - _Fresnel_power: 0.7
+    - _Fresnel_power: 0.37
     - _GlobalLightIntensity: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -127,13 +127,13 @@ Material:
     - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _CenterColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0.9478378, a: 1}
-    - _ColorMain: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorMain: {r: 0.66460484, g: 0.78402996, b: 0.9716981, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _GrabTexture_TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - _HorizontalFogColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightDirection: {r: 1, g: 1, b: 1, a: 1}
-    - _MidColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MidColor: {r: 0.4292453, g: 0.6399517, b: 1, a: 1}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _VerticalFogColor: {r: 1, g: 1, b: 1, a: 1}

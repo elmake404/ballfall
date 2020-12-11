@@ -109,7 +109,7 @@ Material:
     - _Scale: 1
     - _Scale1: -1.38
     - _Scale2: 0.4
-    - _Shininess: 0.5
+    - _Shininess: 1
     - _SrcBlend: 1
     - _Transparency: 1
     - _UVSec: 0
@@ -118,10 +118,10 @@ Material:
     - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _CenterColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.65882355, g: 0.5953225, b: 0.2222537, a: 0}
-    - _ColorMain: {r: 0.63529414, g: 0.047058836, b: 0.61625737, a: 1}
+    - _ColorMain: {r: 0.8679245, g: 0.36078435, b: 0, a: 1}
     - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.16911763, g: 0.16911763, b: 0.16911763, a: 1}
-    - _MidColor: {r: 1, g: 0.41037738, b: 0.9936898, a: 1}
+    - _MidColor: {r: 1, g: 0.6828247, b: 0.24056602, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 0.97616106, g: 0.5424528, b: 1, a: 1}
+    - _SpecColor: {r: 1, g: 0.83633286, b: 0.6933962, a: 1}

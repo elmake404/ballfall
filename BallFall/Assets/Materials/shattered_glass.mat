@@ -120,20 +120,20 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Transparency: 0.7
+    - _Transparency: 0.56
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _CenterColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0.9478378, a: 1}
-    - _ColorMain: {r: 0.39404595, g: 0.5770644, b: 0.7264151, a: 1}
+    - _ColorMain: {r: 0, g: 0.5529413, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _GrabTexture_TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - _HorizontalFogColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightDirection: {r: 1, g: 1, b: 1, a: 1}
-    - _MidColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+    - _MidColor: {r: 0.2028302, g: 0.40792745, b: 1, a: 1}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 1, g: 0.8680028, b: 0.7877358, a: 1}
     - _VerticalFogColor: {r: 1, g: 1, b: 1, a: 1}
