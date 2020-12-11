@@ -70,7 +70,6 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "BonusBottle")
         {
-            Debug.Log(LevelManager.NamberActivationBonus);
             CanvasManager.CanvasMain.ResidentSaved();
             LevelManager.NamberActivationBonus--;
 

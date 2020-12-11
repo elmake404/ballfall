@@ -10,6 +10,7 @@ public class GameContinue : MonoBehaviour
     private void Start()
     {
         _bottom.SetActive(false);
+        StartCoroutine(ActivationBottom());
     }
     void Update()
     {
@@ -27,11 +28,16 @@ public class GameContinue : MonoBehaviour
             }
         }
     }
-    private void FixedUpdate()
+    private IEnumerator ActivationBottom()
     {
-        if (LevelManager.NamberActivationBonus <= 0 && LevelManager.IsGameWin)
-        {
-            _bottom.SetActive(true);
-        }
+        yield return new WaitForSeconds(1);
+        _bottom.SetActive(true);
+
     }
+    //private void FixedUpdate()
+    //{
+    //    if (LevelManager.NamberActivationBonus <= 0 && LevelManager.IsGameWin)
+    //    {
+    //    }
+    //}
 }
