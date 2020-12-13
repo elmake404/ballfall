@@ -49,7 +49,7 @@ public class Bonus : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "ColliderBonus")
+        if (other.tag == "ColliderBonus"&& _collider.gameObject.layer!=0)
         {
           _collider.gameObject.layer = 10;
         }
@@ -70,11 +70,17 @@ public class Bonus : MonoBehaviour
     {
         if (other.tag == "BonusBottle")
         {
-            _collider.gameObject.layer = 9;
-            _meshMain.material = _oldMaterial;
+            StartCoroutine(GetLayer());
 
+            enabled = false;
+            _meshMain.material = _oldMaterial;
             _rbMain.velocity = Vector3.zero;
         }
+    }
+    private IEnumerator GetLayer()
+    {
+        yield return new WaitForSeconds(Random.Range(0.1f,0.6f));
+        _collider.gameObject.layer = 0;
     }
     public void Activation(Transform player, Transform anchor)
     {

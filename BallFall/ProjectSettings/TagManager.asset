@@ -12,6 +12,7 @@ TagManager:
   - ColliderBonus
   - SpaceCamera
   - BonusBottle
+  - NoController
   layers:
   - Default
   - TransparentFX

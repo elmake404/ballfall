@@ -1110,7 +1110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &510400573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3550,11 +3550,6 @@ PrefabInstance:
       propertyPath: _maxSize
       value: 0.31
       objectReference: {fileID: 0}
-    - target: {fileID: 8470289773414133978, guid: 3eefb9c346c00bf408b17ed474507f6d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f7fb316fadce8e2479e03b3f9a5d3bc6, type: 2}
     - target: {fileID: 8683901444030943936, guid: 3eefb9c346c00bf408b17ed474507f6d,
         type: 3}
       propertyPath: m_LocalScale.x

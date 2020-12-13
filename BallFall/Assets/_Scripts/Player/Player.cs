@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private float _factor;
     [SerializeField]
     private bool _isNotGrow;
-    private bool _isMaxMass, _isDestructionMass;
+    private bool _isMaxMass, _isDestructionMass, _isNoController;
 
     [HideInInspector]
     public bool IsFrize;
@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        _isNoController = false;
         PlayerMain = this;
         IsFrize = true;
 
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour
                 _goOffMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
                 _startMosePos = _cam.ScreenToViewportPoint(Input.mousePosition);
             }
-            else if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButton(0) && !_isNoController)
             {
                 ChangeOfSize(1);
                 _isMaxMass = true;
@@ -74,10 +75,8 @@ public class Player : MonoBehaviour
 
                 if (Mathf.Abs((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity) > 1)
                 {
-                    float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 1f/ _joystickSensitivity : -(1f/ _joystickSensitivity));
+                    float xStart = ((_currentMosePos.x - _startMosePos.x) > 0 ? 1f / _joystickSensitivity : -(1f / _joystickSensitivity));
                     _startMosePos.x = _currentMosePos.x - xStart;
-                    //Debug.Log((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity);
-
                 }
 
                 float X = ((_currentMosePos.x - _startMosePos.x) * _joystickSensitivity) * _speed;
@@ -130,12 +129,20 @@ public class Player : MonoBehaviour
             LevelManager.IsStartGame = false;
             StartCoroutine(FinishGame());
         }
+        if (other.tag == "NoController")
+        {
+            _isNoController = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "BoundaryWalls")
         {
             _isNotGrow = false;
+        }
+        if (other.tag == "NoController")
+        {
+            _isNoController = false;
         }
     }
     private void OnCollisionEnter(Collision collision)
