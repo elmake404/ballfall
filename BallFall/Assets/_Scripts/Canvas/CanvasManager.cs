@@ -33,7 +33,7 @@ public class CanvasManager : MonoBehaviour
 
         //PlayerPrefs.SetInt("Scenes", 1);
         //PlayerPrefs.SetInt("Level", 1);
-        //PlayerPrefs.SetInt("FirstEntry", 0);
+        PlayerPrefs.SetInt("FirstEntry", 0);
         _player = Player.PlayerMain;
 
         _maxDistance = _player.GetMagnitudeToFinish();
