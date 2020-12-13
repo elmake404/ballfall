@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class LevelBottom : MonoBehaviour
 {
     [SerializeField]
+    private Text _textLevel;
+    [SerializeField]
     private Image _activation, _offActivation;
     [SerializeField]
     private int _level;
@@ -17,6 +19,7 @@ public class LevelBottom : MonoBehaviour
     private string _activationLevel;
     private void Awake()
     {
+        _textLevel.text = _level.ToString(); 
         _activationLevel = "ActivationLevel" + _level;
 
         if (PlayerPrefs.GetFloat(_activationLevel) <= 0)
