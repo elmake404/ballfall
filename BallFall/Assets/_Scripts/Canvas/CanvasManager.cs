@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
@@ -36,12 +37,16 @@ public class CanvasManager : MonoBehaviour
 
         _maxDistance = _player.GetMagnitudeToFinish();
 
-        if (PlayerPrefs.GetInt("Level") <= 0)
+        if (PlayerPrefs.GetInt("Level") <= 0 )
         {
             PlayerPrefs.SetInt("Level", 1);
         }
+        else if (PlayerPrefs.GetInt("Level") >= SceneManager.sceneCountInBuildSettings)
+        {
+            PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Scenes"));
+        }
 
-       string ActivationLevel = "ActivationLevel" + PlayerPrefs.GetInt("Level");
+        string ActivationLevel = "ActivationLevel" + PlayerPrefs.GetInt("Level");
         PlayerPrefs.SetFloat(ActivationLevel, 1);
 
         _texLevelWin.text = "Level " + PlayerPrefs.GetInt("Level");
@@ -122,7 +127,7 @@ public class CanvasManager : MonoBehaviour
     {
         _receivedStars = LevelManager.NamberActivationBonus * _fillStars;
         string receivedStars = "receivedStars" + PlayerPrefs.GetInt("Level");
-        if (PlayerPrefs.GetFloat(receivedStars)<= _receivedStars)
+        if (PlayerPrefs.GetFloat(receivedStars) <= _receivedStars)
         {
             PlayerPrefs.SetFloat(receivedStars, _receivedStars);
         }
