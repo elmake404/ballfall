@@ -90,4 +90,13 @@ public class FacebookManager : MonoBehaviour
             "Level fail",
             parameters : tutParms);
     }
+    public void MainMenu()
+    {
+        var tutParms = new Dictionary<string, object>();
+        tutParms["Main menu"] = "Main menu";
+
+        FB.LogAppEvent(
+            "Main menu",
+            parameters: tutParms);
+    }
 }

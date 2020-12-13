@@ -12,4 +12,15 @@ public class Bottom : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void MainMenuButton()
+    {
+        LevelManager.IsStartGame = false;
+        LevelManager.IsGameWin = false;
+        LevelManager.IsGameLose = false;
+
+        FacebookManager.Instance.MainMenu();
+
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+
+    }
 }

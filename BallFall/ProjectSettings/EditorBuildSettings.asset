@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/LevelBild/24.unity
     guid: c7686607e0598844dbbc0391bacc5a10
+  - enabled: 1
+    path: Assets/Levels/MainMenu.unity
+    guid: a6112eaff9698824fa5e83f072551e91
   m_configObjects: {}

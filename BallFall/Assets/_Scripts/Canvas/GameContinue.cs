@@ -12,13 +12,15 @@ public class GameContinue : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && _bottom.activeSelf)
         {
             LevelManager.IsGameWin = false;
-            if (PlayerPrefs.GetInt("Scenes") < SceneManager.sceneCountInBuildSettings)
+            if (PlayerPrefs.GetInt("Scenes") < SceneManager.sceneCountInBuildSettings - 1)
             {
                 SceneManager.LoadScene(PlayerPrefs.GetInt("Scenes"));
             }
             else
             {
                 PlayerPrefs.SetInt("Scenes", 1);
+                PlayerPrefs.SetInt("Level", 1);
+
                 SceneManager.LoadScene(PlayerPrefs.GetInt("Scenes"));
             }
         }

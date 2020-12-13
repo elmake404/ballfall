@@ -28,11 +28,8 @@ public class CanvasManager : MonoBehaviour
         LevelManager.Namberbonus = 0;
         _fillStars = 3f / _namberBonus;
 
-        Debug.Log(_namberBonus);
-        Debug.Log(_fillStars);
-
-        //PlayerPrefs.SetInt("Scenes", 11);
-        //PlayerPrefs.SetInt("Level", 11);
+        //PlayerPrefs.SetInt("Scenes", 1);
+        //PlayerPrefs.SetInt("Level", 1);
         //PlayerPrefs.SetInt("FirstEntry", 0);
 
         _player = Player.PlayerMain;
@@ -43,6 +40,9 @@ public class CanvasManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level", 1);
         }
+
+       string ActivationLevel = "ActivationLevel" + PlayerPrefs.GetInt("Level");
+        PlayerPrefs.SetFloat(ActivationLevel, 1);
 
         _texLevelWin.text = "Level " + PlayerPrefs.GetInt("Level");
         _texLevelGameCurrent.text = PlayerPrefs.GetInt("Level").ToString();
@@ -121,6 +121,11 @@ public class CanvasManager : MonoBehaviour
     public void ResidentSaved()
     {
         _receivedStars = LevelManager.NamberActivationBonus * _fillStars;
+        string receivedStars = "receivedStars" + PlayerPrefs.GetInt("Level");
+        if (PlayerPrefs.GetFloat(receivedStars)<= _receivedStars)
+        {
+            PlayerPrefs.SetFloat(receivedStars, _receivedStars);
+        }
         LevelManager.NamberActivationBonus = 0;
     }
 
